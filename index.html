@@ -10,7 +10,7 @@
     <body>
         <h1>Calculadora de intereses</h1>
         <h2>Formulario de calculo</h2>
-        <form id="fmortgage" onsubmit="return calculateMortage()" method="get">
+        <form id="fmortgage" onsubmit="return calculateMortage(event)" method="get" target="_blank">
             <label for="valorTotal">Valor Total del Inmueble</label><br>
             <input type="text" id="valorTotal" name=""><br>
             <label for="cuotaInicial">Cuota Inicial</label><br>
