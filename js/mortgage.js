@@ -29,3 +29,7 @@ function outputMortgage (datosFinales) {
     document.getElementById("montoPrestamo").innerHTML = datosFinales.totalPrestamo;
     document.getElementById("valorCuota").innerHTML = datosFinales.cuotaMensual;
 }
+//Reiniciar formulario
+function reiniciarForm() {
+    document.forms["fmortgage"].reset();
+}
