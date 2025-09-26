@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="../css/bootstrap-5.2.3-dist/js/popper.min.js"></script>
+        <script src="../css/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+        <title>form</title>
+    </head>
+
+    <body>
+        <h1>Inmogestion S.A.</h1>
+        <div class="card mx-3 mt-n5 shadow-lg" style="border-radius: 10px; border-left: 8px solid blue; border-right: 8px solid blue;
+        border-top:none; border-bottom:none;">
+            <div class="card-body">
+
+                <h2>Formulario de contacto</h2>
+                <form id="formDatos" onsubmit="return guardar()">
+                    <div class="row">
+                        <div class="col">
+                            <label for="nombres" class="form-label">Nombres:</label>
+                            <input type="text" id="nombres" name="" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label for="apellidos" class="form-label">Apellidos:</label>
+                            <input type="text" id="apellidos" name="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="numeroTelefono" class="form-label">Numero de Telefono:</label>
+                            <input type="text" id="numeroTelefono" name="" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label for="correo" class="form-label">Correo electronico:</label>
+                            <input type="text" id="correo" name="" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label for="pais" class="form-label">Pais:</label>
+                            <input type="text" id="pais" name="" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label for="ciudad" class="form-label">Ciudad:</label>
+                            <input type="text" id="ciudad" name="" class="form-control">
+                            <br>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="btn btn-primary" style="border-radius: 4px;">Guardar</button>
+                        </div>
+                    </div>
+                </form>
+                <script src="./js/form.js" defer></script>
+            </div>
+        </div>
+    </body>
+
+</html>
