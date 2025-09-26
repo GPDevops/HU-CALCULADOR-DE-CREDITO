@@ -26,10 +26,18 @@ function calculateMortage(event) {
 //Mostrar valores
 function outputMortgage(datosFinales) {
     //alert("Se ha ingresado en la ultima funcion")
-    document.getElementById("montoPrestamo").innerHTML = datosFinales.totalPrestamo;
-    document.getElementById("valorCuota").innerHTML = datosFinales.cuotaMensual;
+    document.getElementById("montoPrestamo").innerHTML = valueToDollar(datosFinales.totalPrestamo);
+    document.getElementById("valorCuota").innerHTML = valueToDollar(datosFinales.cuotaMensual);
 }
 //Reiniciar formulario
 function reiniciarForm() {
     document.forms["fmortgage"].reset();
+}
+function valueToDollar(value) {
+    const dollarFormatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 2
+    });
+    return dollarFormatter.format(value);
 }
