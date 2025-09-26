@@ -1,3 +1,4 @@
+Pagina principal de la calculadora de credito
 1. Yo como analista de credito quiero una funcionalidad para determinar la cuota mensual que deberia pagar un cliente
     que quiere comprar una casa de un determinado valor, con una cuota inicial al interes que propone del banco y a 
     un plazo determinado en anios.
@@ -10,4 +11,15 @@
     - total intereses = 288000 * (1.5/100)
     - cuota = (288000+4320)/(30*12) = 812
 
-    
+ Formulario:
+1. Como asistente requiero un formulario para recopilar los datos del cliente.
+2. Las etiquetas del formulario deben estar en negrita y tamanio de letra grande.
+3. Ademas, debe existir un boton para guardar.
+4. Los datos a solicitar son:
+    - Nombres:
+    - Apellidos:
+    - Numero de Telefono:
+    - Correo electronico:
+    - Pais:
+    - Ciudad:
+5. Cuando se guarde los datos debe mostrar un alert "Datos guardados con exito"
