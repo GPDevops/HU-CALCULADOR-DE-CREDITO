@@ -10,36 +10,63 @@
         <title>Document</title>
     </head>
 
-    <body>
-        <h1>Calculadora de intereses</h1>
-        <h2>Formulario de calculo</h2>
-        <form id="fmortgage" onsubmit="return calculateMortage(event)" method="get" target="_blank">
-            <div class="mb-3">
-                <label for="valorTotal" class="form-label">Valor Total del Inmueble</label>
-                <input type="text" id="valorTotal" name="" class="form-control">
-                <label for="cuotaInicial" class="form-label">Cuota Inicial</label>
-                <input type="text" id="cuotaInicial" name="" class="form-control">
+    <body class="bg-dark">
+        <div class="container p-3">
+            <h1 class="text-primary">Inmogestion S.A.</h1>
+            <div class="card mx-3 mt-n5 shadow-lg" style="border-radius: 10px; border-left: 8px solid blue; border-right: 8px solid blue;
+        border-top:none; border-bottom:none;">
+                <div class="card-body">
+                    <h3 class="text-primary text-uppercase mb-3">Calculo Hipotecario</h3>
+                    <form id="fmortgage" onsubmit="return calculateMortage(event)" method="get" target="_blank">
+                        <div class="row">
+                            <div class="col">
+                                <label for="valorTotal" class="form-label">Valor Total del Inmueble</label>
+                                <input type="text" id="valorTotal" name="" class="form-control">
+                            </div>
+                            <div class="col">
+                                <label for="cuotaInicial" class="form-label">Cuota Inicial</label>
+                                <input type="text" id="cuotaInicial" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="tasaInteres" class="form-label">Tasa de Interes Anual</label>
+                                <input type="text" id="tasaInteres" name="" class="form-control">
+                            </div>
+                            <div class="col">
+                                <label for="plazo" class="form-label">Plazo en Años</label>
+                                <input type="text" id="plazo" name="" class="form-control">
+                                <br>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary" style="border-radius: 4px;">Calcular</button>
+                            <button class="btn btn-primary" style="border-radius: 4px;"
+                                onclick="reiniciarForm()">Reset</button>
+                        </div>
+                    </form>
+                    <script src="./js/mortgage.js"></script>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="tasaInteres" class="form-label">Tasa de Interes Anual</label>
-                <input type="text" id="tasaInteres" name="" class="form-control">
-                <label for="plazo" class="form-label">Plazo en Años</label>
-                <input type="text" id="plazo" name="" class="form-control">
-            </div>
-            <div>
-                <button type="submit">Calcular</button>
-                <button onclick="reiniciarForm()">Reset</button>
-            </div>
-        </form>
-        <div>
-            <label for="montoPrestamo">Monto del prestamo</label>
-            <output id="montoPrestamo">0</output>
         </div>
-        <div>
-            <label for="valorCuota">Valor Cuota Mensual</label>
-            <output id="valorCuota">0</output>
+        <div class="container p-3">
+            <h1 class="text-primary">Resultado del cálculo</h1>
+            <div class="card" mx-3 mt-n5 shadow-lg" style="border-radius: 10px; border-left: 8px solid blue; border-right: 8px solid blue;
+        border-top:none; border-bottom:none;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <label for="montoPrestamo" class="form-label">Monto del prestamo</label>
+                            <output id="montoPrestamo" class="form-control">0</output>
+                        </div>
+                        <div class="col">
+                            <label for="valorCuota" class="form-label">Valor Cuota Mensual</label>
+                            <output id="valorCuota" class="form-control">0</output>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <script src="./js/mortgage.js"></script>
     </body>
 
 </html>
