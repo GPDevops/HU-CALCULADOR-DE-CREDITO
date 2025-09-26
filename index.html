@@ -11,21 +11,31 @@
         <h1>Calculadora de intereses</h1>
         <h2>Formulario de calculo</h2>
         <form id="fmortgage" onsubmit="return calculateMortage(event)" method="get" target="_blank">
-            <label for="valorTotal">Valor Total del Inmueble</label><br>
-            <input type="text" id="valorTotal" name=""><br>
-            <label for="cuotaInicial">Cuota Inicial</label><br>
-            <input type="text" id="cuotaInicial" name=""><br>
-            <label for="tasaInteres">Tasa de Interes Anual</label><br>
-            <input type="text" id="tasaInteres" name=""><br>
-            <label for="plazo">Plazo en Años</label><br>
-            <input type="text" id="plazo" name=""><br><br>
+            <div>
+            <label for="valorTotal">Valor Total del Inmueble</label>
+            <input type="text" id="valorTotal" name="">
+            <label for="cuotaInicial">Cuota Inicial</label>
+            <input type="text" id="cuotaInicial" name="">
+            </div>
+            <div>
+            <label for="tasaInteres">Tasa de Interes Anual</label>
+            <input type="text" id="tasaInteres" name="">
+            <label for="plazo">Plazo en Años</label>
+            <input type="text" id="plazo" name="">
+            </div>
+            <div>  
             <button type="submit">Calcular</button>
             <button onclick="reiniciarForm()">Reset</button>
+            </div>
         </form>
+        <div>
         <label for="montoPrestamo">Monto del prestamo</label>
-        <output id="montoPrestamo">0</output><br>
+        <output id="montoPrestamo">0</output>
+        </div>
+        <div>
         <label for="valorCuota">Valor Cuota Mensual</label>
-        <output id="valorCuota">0</output><br>
+        <output id="valorCuota">0</output>
+        </div>
         <script src="./js/mortgage.js"></script>
     </body>
 
