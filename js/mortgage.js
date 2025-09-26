@@ -1,5 +1,5 @@
 //Definir los valores de entrada
-function calculateMortage(event) {                                  
+function calculateMortage(event) {
     event.preventDefault();                                             //Prevenir que realice el comportamiento default
     let valorTotal = document.forms["fmortgage"]["valorTotal"].value;
     //alert("El valor Total es: " + valorTotal)
@@ -24,7 +24,7 @@ function calculateMortage(event) {
     outputMortgage(mortgage);
 }
 //Mostrar valores
-function outputMortgage (datosFinales) {
+function outputMortgage(datosFinales) {
     //alert("Se ha ingresado en la ultima funcion")
     document.getElementById("montoPrestamo").innerHTML = datosFinales.totalPrestamo;
     document.getElementById("valorCuota").innerHTML = datosFinales.cuotaMensual;

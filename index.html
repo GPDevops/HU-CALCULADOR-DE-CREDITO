@@ -4,6 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./css/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="./css/bootstrap-5.2.3-dist/js/popper.min.js"></script>
+        <script src="./css/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
         <title>Document</title>
     </head>
 
@@ -11,30 +14,30 @@
         <h1>Calculadora de intereses</h1>
         <h2>Formulario de calculo</h2>
         <form id="fmortgage" onsubmit="return calculateMortage(event)" method="get" target="_blank">
-            <div>
-            <label for="valorTotal">Valor Total del Inmueble</label>
-            <input type="text" id="valorTotal" name="">
-            <label for="cuotaInicial">Cuota Inicial</label>
-            <input type="text" id="cuotaInicial" name="">
+            <div class="mb-3">
+                <label for="valorTotal" class="form-label">Valor Total del Inmueble</label>
+                <input type="text" id="valorTotal" name="" class="form-control">
+                <label for="cuotaInicial" class="form-label">Cuota Inicial</label>
+                <input type="text" id="cuotaInicial" name="" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="tasaInteres" class="form-label">Tasa de Interes Anual</label>
+                <input type="text" id="tasaInteres" name="" class="form-control">
+                <label for="plazo" class="form-label">Plazo en Años</label>
+                <input type="text" id="plazo" name="" class="form-control">
             </div>
             <div>
-            <label for="tasaInteres">Tasa de Interes Anual</label>
-            <input type="text" id="tasaInteres" name="">
-            <label for="plazo">Plazo en Años</label>
-            <input type="text" id="plazo" name="">
-            </div>
-            <div>  
-            <button type="submit">Calcular</button>
-            <button onclick="reiniciarForm()">Reset</button>
+                <button type="submit">Calcular</button>
+                <button onclick="reiniciarForm()">Reset</button>
             </div>
         </form>
         <div>
-        <label for="montoPrestamo">Monto del prestamo</label>
-        <output id="montoPrestamo">0</output>
+            <label for="montoPrestamo">Monto del prestamo</label>
+            <output id="montoPrestamo">0</output>
         </div>
         <div>
-        <label for="valorCuota">Valor Cuota Mensual</label>
-        <output id="valorCuota">0</output>
+            <label for="valorCuota">Valor Cuota Mensual</label>
+            <output id="valorCuota">0</output>
         </div>
         <script src="./js/mortgage.js"></script>
     </body>
