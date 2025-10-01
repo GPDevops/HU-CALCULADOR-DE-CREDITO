@@ -9,11 +9,13 @@ function calculateMortage(event) {
     //alert("El valor Total es: " + valorTotal + " La cuota inicial es: " + cuotaInicial + " La tasa de interes: " + tasaInteres + " El plazo es: " + plazo)
     //Definir los valores de salida
     const mortgage = {
+        costoTotalInmueble: 0,
         totalPrestamo: 0,
         totalIntereses: 0,
         cuotaMensual: 0
     };
     //Calculos
+    mortgage.costoTotalInmueble = valorTotal;
     const monthsOfYear = 12;
     mortgage.totalPrestamo = valorTotal - cuotaInicial;
     //alert("La diferencia entre el valor total del inmueble y la cuota de entrada es: " + mortgage.totalPrestamo)
@@ -28,6 +30,13 @@ function outputMortgage(datosFinales) {
     //alert("Se ha ingresado en la ultima funcion")
     document.getElementById("montoPrestamo").innerHTML = valueToDollar(datosFinales.totalPrestamo);
     document.getElementById("valorCuota").innerHTML = valueToDollar(datosFinales.cuotaMensual);
+    var totalPrestamoPorcentaje = 0;
+    totalPrestamoPorcentaje = (datosFinales.totalPrestamo *100 / datosFinales.costoTotalInmueble);
+    alert("El porcentaje del prestamo es: " + totalPrestamoPorcentaje);
+    //<output id="montoPrestamo" class="form-control alertaPorcentaje">0</output>  <---a modificar esta clase del index.html
+    if (totalPrestamoPorcentaje > 90) {
+        document.getElementById("montoPrestamo").className += " alertaPorcentaje";
+    }
 }
 //Reiniciar formulario
 function reiniciarForm() {
