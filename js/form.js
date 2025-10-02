@@ -17,6 +17,7 @@
 //Verificar los valores de entrada. 2a solucion
 
 const persona = {
+    id: 0,
     nombres: "",
     apellidos: "",
     numeroTelefono: "",
@@ -25,7 +26,7 @@ const persona = {
     ciudad: ""
 };
 
-let personasArray = [];
+//let personasArray = [];
 
 //Utilizando funciones
 function processContactForm(e) {
@@ -36,13 +37,19 @@ function processContactForm(e) {
     persona.pais = document.forms["formDatos"]["pais"].value;
     persona.ciudad = document.forms["formDatos"]["ciudad"].value;
 
+    //persona.id = personasArray.length;   //Asignar un ID unico a cada objeto
+    persona.id = allStorage().length;   //Asignar un ID unico a cada objeto
+
+    //Convertir el objeto a formato JSON
     let personaJson = JSON.stringify(persona);
 
-    personasArray.push(personaJson);
+    localStorage.setItem(persona.id, personaJson);
+
+    //personasArray.push(personaJson);
 
     e.preventDefault();
     //alert("Datos ingresados con exito: " + personasArray.toString());
-
+    alert("Datos ingresados con exito: ");
 }
 //Crear tabla dinamica
 
@@ -51,25 +58,71 @@ function listarcontactos() {
     //cabecera de la tabla
     dinamicTable += "<table class='table table-striped'>";
     dinamicTable += "<tr>";
+    dinamicTable += "<th>Id</th>";
     dinamicTable += "<th>Nombres</th>";
     dinamicTable += "<th>Apellidos</th>";
     dinamicTable += "<th>Numero Telefonico</th>";
     dinamicTable += "<th>Correo</th>";
     dinamicTable += "<th>Pais</th>";
     dinamicTable += "<th>Ciudad</th>";
+    dinamicTable += "<th>Accion</th>";
     dinamicTable += "</tr>";
-//filas con informacion de la tabla
-for (let i = 0; i < personasArray.length; i++) {
-    dinamicTable += "<tr>";
-    let personaobjeto = JSON.parse(personasArray[i]);
-    dinamicTable += "<td>" + personaobjeto.nombres + "</td>";
-    dinamicTable += "<td>" + personaobjeto.apellidos + "</td>";
-    dinamicTable += "<td>" + personaobjeto.numeroTelefono + "</td>";
-    dinamicTable += "<td>" + personaobjeto.correo + "</td>";
-    dinamicTable += "<td>" + personaobjeto.pais + "</td>";
-    dinamicTable += "<td>" + personaobjeto.ciudad + "</td>";
-    dinamicTable += "</tr>";
-}
+    //filas con informacion de la tabla
+    let personasGuardadas = [];
+    personasGuardadas = allStorage();
+    for (let i = 0; i < personasGuardadas.length; i++) {
+        dinamicTable += "<tr>";
+            let personaobjeto = JSON.parse(personasGuardadas[i]);
+            dinamicTable += "<td>" + personaobjeto.id + "</td>";
+            dinamicTable += "<td>" + personaobjeto.nombres + "</td>";
+            dinamicTable += "<td>" + personaobjeto.apellidos + "</td>";
+            dinamicTable += "<td>" + personaobjeto.numeroTelefono + "</td>";
+            dinamicTable += "<td>" + personaobjeto.correo + "</td>";
+            dinamicTable += "<td>" + personaobjeto.pais + "</td>";
+            dinamicTable += "<td>" + personaobjeto.ciudad + "</td>";
+            dinamicTable += "<td>" + '<a href="./detalles.html?id='+ personaobjeto.id +'">Ver</a>' + "</td>";
+        dinamicTable += "</tr>";
+    }
     dinamicTable += "</table>";
     document.getElementById("tablecontact").innerHTML = dinamicTable;
-} 
+}
+
+//Guardar datos en el almacenamiento local del navegador
+function allStorage() {
+    var values = [],
+        keys = Object.keys(localStorage),
+        i = keys.length;
+    while (i--) {
+        values.push(localStorage.getItem(keys[i]));
+    }
+    return values;
+}
+
+//Mostrar detalles del contacto
+function verDetalles() {
+    let contactoId = obtenerParametroUrl();
+    let contacto = localStorage.getItem(contactoId);
+    if (contacto.length) {
+        let personaObjeto = JSON.parse(contacto);
+        document.getElementById("nombres").innerText = personaObjeto.nombres;
+        document.getElementById("apellidos").innerText = personaObjeto.apellidos;
+        document.getElementById("numeroTelefono").innerText = personaObjeto.numeroTelefono;
+        document.getElementById("correo").innerText = personaObjeto.correo;
+        document.getElementById("pais").innerText = personaObjeto.pais;
+        document.getElementById("ciudad").innerText = personaObjeto.ciudad;
+    }
+}
+
+function obtenerParametroUrl() {
+    let url = window.location.href;
+    let paramString = url.split('?')[1];
+    let queryString = new URLSearchParams(paramString);
+    let parameterId = 0;
+    for (let pair of queryString.entries()) {
+        //console.log("Key: " + pair[0]);
+        //console.log("Value: " + pair[1]);
+        parameterId = pair[1];
+        
+    }
+    return parameterId;
+}
