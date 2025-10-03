@@ -50,7 +50,7 @@ function processContactForm(e) {
 
     e.preventDefault();
     //alert("Datos ingresados con exito: " + personasArray.toString());
-    alert("Datos ingresados con exito: ");
+    //alert("Datos ingresados con exito: ");
     listarcontactos();
     resetform();
 }
@@ -65,7 +65,7 @@ function resetform(){
 function listarcontactos() {
     let dinamicTable = "";
     //cabecera de la tabla
-    dinamicTable += "<table class='table'>";
+    dinamicTable += "<table>";
     dinamicTable += "<tr>";
     dinamicTable += "<th>Id</th>";
     dinamicTable += "<th>Nombres</th>";
