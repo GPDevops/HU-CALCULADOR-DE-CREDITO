@@ -1,3 +1,7 @@
+
+<?php
+include "create.php";
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -15,10 +19,12 @@
         <h1>Inmogestion S.A.</h1>
         <div class="card mx-3 mt-n5 shadow-lg" style="border-radius: 10px; border-left: 8px solid blue; border-right: 8px solid blue;
         border-top:none; border-bottom:none;">
+            <!--Definir un componente card para ubicar el cuerpo del formulario-->
             <div class="card-body">
-
+                <!--Definir titulo del formulario-->
                 <h2>Formulario de contacto</h2>
-                <form id="formDatos" onsubmit="return processContactForm(event)">
+                <!--Definir el formulario-->
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" id="formDatos" method="post">
                     <div class="row">
                         <div class="col">
                             <label for="nombres" class="form-label">Nombres:</label>
