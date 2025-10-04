@@ -28,29 +28,29 @@ include "create.php";
                     <div class="row">
                         <div class="col">
                             <label for="nombres" class="form-label">Nombres:</label>
-                            <input type="text" id="nombres" name="" class="form-control">
+                            <input type="text" id="nombres" name="nombres" class="form-control">
                         </div>
                         <div class="col">
                             <label for="apellidos" class="form-label">Apellidos:</label>
-                            <input type="text" id="apellidos" name="" class="form-control">
+                            <input type="text" id="apellidos" name="apellidos" class="form-control">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <label for="numeroTelefono" class="form-label">Numero de Telefono:</label>
-                            <input type="text" id="numeroTelefono" name="" class="form-control">
+                            <input type="text" id="numeroTelefono" name="numeroTelefono" class="form-control">
                         </div>
                         <div class="col">
                             <label for="correo" class="form-label">Correo electronico:</label>
-                            <input type="text" id="correo" name="" class="form-control">
+                            <input type="text" id="correo" name="correo" class="form-control">
                         </div>
                         <div class="col">
                             <label for="pais" class="form-label">Pais:</label>
-                            <input type="text" id="pais" name="" class="form-control">
+                            <input type="text" id="pais" name="pais" class="form-control">
                         </div>
                         <div class="col">
                             <label for="ciudad" class="form-label">Ciudad:</label>
-                            <input type="text" id="ciudad" name="" class="form-control">
+                            <input type="text" id="ciudad" name="ciudad" class="form-control">
                             <br>
                         </div>
 
