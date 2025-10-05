@@ -1,5 +1,5 @@
 <?php
-require_once "configuration.php";
+require_once "configuracion.php";
 $sql = "select * from contactos";
 if ($resultado = $pdo->query($sql)) {
     if ($resultado->rowCount()) {
@@ -18,14 +18,14 @@ if ($resultado = $pdo->query($sql)) {
         //Por cada contacto se pinta un renglon o fila de la tabla
         while ($row = $resultado->fetch()) {
             echo "<tr>";
-            echo "<td>" . $row["id"] . "</td>";
-            echo "<td>" . $row["nombres"] . "</td>";
-            echo "<td>" . $row["apellidos"] . "</td>";
-            echo "<td>" . $row["numeroTelefono"] . "</td>";
-            echo "<td>" . $row["correo"] . "</td>";
-            echo "<td>" . $row["pais"] . "</td>";
-            echo "<td>" . $row["ciudad"] . "</td>";
-            echo "<td>" + '<a href="./detalles.php?id=' . $row["id"] . '">Ver</a>' + "</td>";
+            echo "<td>" .$row["id"]. "</td>";
+            echo "<td>" .$row["nombres"]. "</td>";
+            echo "<td>" .$row["apellidos"]. "</td>";
+            echo "<td>" .$row["numeroTelefono"]. "</td>";
+            echo "<td>" .$row["correo"]. "</td>";
+            echo "<td>" .$row["pais"]. "</td>";
+            echo "<td>" .$row["ciudad"]. "</td>";
+            echo '<a href="./detalles.php?id='.$row["id"].'">Ver</a>';"</td>";
             echo "</tr>";
             echo "<tr>";
         }
