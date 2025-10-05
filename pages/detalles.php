@@ -41,7 +41,7 @@
                         <label for="ciudad">Ciudad</label>
                         <p id="ciudad" class="fw-bold"></p>
                         </div>
-                        <p><a href='./form.html' class="btn btn-primary" style="border-radius: 4px;">Regresar a pagina anterior</a></p>
+                        <p><a href='./form.php' class="btn btn-primary" style="border-radius: 4px;">Regresar a pagina anterior</a></p>
                     </div>
                     
                 </div>
