@@ -67,7 +67,9 @@ include "create.php";
                         </div>
                          
                         <div class="tableFixHead" id="tablecontact">
-                            <?php require_once "read.php";?>
+                            <?php
+                            require_once "read.php";
+                            ?>
                         </div>
                     </div>
                 </form>

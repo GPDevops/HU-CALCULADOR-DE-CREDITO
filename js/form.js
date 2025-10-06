@@ -89,7 +89,7 @@ function listarcontactos() {
         dinamicTable += "<td>" + personaobjeto.correo + "</td>";
         dinamicTable += "<td>" + personaobjeto.pais + "</td>";
         dinamicTable += "<td>" + personaobjeto.ciudad + "</td>";
-        dinamicTable += "<td>" + '<a href="./detalles.html?id=' + personaobjeto.id + '">Ver</a>' + "</td>";
+        dinamicTable += "<td>" + '<a href="./detalles.php?id=' + personaobjeto.id + '">Ver</a>' + "</td>";
         dinamicTable += "<td>" + '<a href="javascript:editarContacto(' + personaobjeto.id + ');">Editar</a>' + "</td>";
         dinamicTable += "<td>" + '<a href="javascript:eliminarContacto(' + personaobjeto.id + ');">Eliminar</a>' + "</td>";
         dinamicTable += "</tr>";
