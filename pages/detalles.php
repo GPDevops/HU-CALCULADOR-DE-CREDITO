@@ -52,7 +52,6 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
 
         <link rel="stylesheet" href="../css/bootstrap-5.2.3-dist/css/bootstrap.min.css">
         <script src="../css/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
-        <script src="../js/form.js"></script>
         <title>Detalles del Contacto</title>
     </head>
 

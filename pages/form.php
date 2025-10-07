@@ -10,7 +10,6 @@ include "create.php";
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../css/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="../css/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>  
-        <script src="../js/form.js"></script>
         <link rel="stylesheet" href="../css/mortgage.css">
         <title>form</title>
     </head>
@@ -59,15 +58,16 @@ include "create.php";
 
                         <div>
                             <button type="submit" class="btn btn-primary" style="border-radius: 4px; margin-bottom: 4px;">Guardar</button>
-                            <button onclick="resetform()" type="reset" class="btn btn-primary" style="border-radius: 4px; margin-bottom: 4px;">Reiniciar formulario</button>
+                            <!--<button onclick="resetform()" type="reset" class="btn btn-primary" style="border-radius: 4px; margin-bottom: 4px;">Reiniciar formulario</button>-->
                         </div>
                         
                         <div>
-                            <a href="../index.html" class="btn btn-primary" style="border-radius: 4px;">Ir a la página
+                            <a href="../index.html" class="btn btn-primary" style="border-radius: 4px; margin-bottom: 4px">Ir a la página
                                 principal</a>
                             </a>
-                            <button onclick="listarcontactos()" type="button" class="btn btn-primary" style="border-radius: 4px;">Listar</button>
+                            <!--<button onclick="listarcontactos()" type="button" class="btn btn-primary" style="border-radius: 4px;">Listar</button>-->
                         </div>
+                    
                          
                         <div class="tableFixHead" id="tablecontact">
                             <?php
