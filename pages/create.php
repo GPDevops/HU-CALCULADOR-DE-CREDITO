@@ -25,13 +25,13 @@ function processContactForm() {
 //Para acceder a la DB, siempre se usa la variable $pdo que esta definida en el archivo config.php
 //con el API $pdo necesitamos definir un objeto $stmt para ejecutar los comandos
     if ($stmt = $pdo->prepare($sql)) {
-        //se ejecuta la sentencia sql que devolvera falso o verdader para indicar exito o error
+        //se ejecuta la sentencia sql que devolvera falso o verdadero para indicar exito o error
         if ($stmt->execute([$nombres,$apellidos,$numeroTelefono,$correo,$pais,$ciudad])) {
         //si se ha guardado con exito se redirige a la pagina de contacto
         header("location: form.php");
         exit();
         }else {
-            echo "Los siento! se ha presentado un error.";
+            echo "Lo siento! se ha presentado un error.";
         }
     }
     //cerrar la variable stmt

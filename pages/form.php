@@ -15,8 +15,11 @@ include "create.php";
         <title>form</title>
     </head>
 
-    <body>
-        <h1>Inmogestion S.A.</h1>
+    <body class="bg-dark">
+        <h1 class="card-title mb-3 text-primary p-2">Inmogestion S.A.</h1>
+        <!--Definir el contenedor con 5p de espacio en el margen superior-->
+    <div class="container p-2">
+        <!--Definir un componente card para ubicar todo el formulario-->
         <div class="card mx-3 mt-n5 shadow-lg" style="border-radius: 10px; border-left: 8px solid blue; border-right: 8px solid blue;
         border-top:none; border-bottom:none;">
             <!--Definir un componente card para ubicar el cuerpo del formulario-->
@@ -76,7 +79,7 @@ include "create.php";
                 
             </div>
         </div>
-       
+    </div>  
     </body>
 
 </html>
