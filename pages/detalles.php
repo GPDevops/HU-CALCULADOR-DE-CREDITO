@@ -14,7 +14,7 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
          if($stmt ->execute([$param_id])){ 
              //si el resultado es exitoso se comprueba que si obtengamos registros
             if($stmt ->rowCount() == 1){
-                //dado que se obendria solo un registro porque se busca por ID, no es necesario hacer un siclo, el fet devuelve un array asociativo
+                //dado que se obtendria solo un registro porque se busca por ID, no es necesario hacer un siclo, el fet devuelve un array asociativo
                 $row = $stmt -> fetch();
                 // se recuperan los valores en cada variable
                 $nombres = $row["nombres"];

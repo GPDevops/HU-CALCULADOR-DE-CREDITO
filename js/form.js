@@ -66,15 +66,15 @@ function listarcontactos() {
     let dinamicTable = "";
     //cabecera de la tabla
     dinamicTable += "<table>";
-    dinamicTable += "<tr>";
-    dinamicTable += "<th>Id</th>";
-    dinamicTable += "<th>Nombres</th>";
-    dinamicTable += "<th>Apellidos</th>";
-    dinamicTable += "<th>Numero Telefonico</th>";
-    dinamicTable += "<th>Correo</th>";
-    dinamicTable += "<th>Pais</th>";
-    dinamicTable += "<th>Ciudad</th>";
-    dinamicTable += "<th>Accion</th>";
+        dinamicTable += "<tr>";
+            dinamicTable += "<th>Id</th>";
+            dinamicTable += "<th>Nombres</th>";
+            dinamicTable += "<th>Apellidos</th>";
+            dinamicTable += "<th>Numero Telefonico</th>";
+            dinamicTable += "<th>Correo</th>";
+            dinamicTable += "<th>Pais</th>";
+            dinamicTable += "<th>Ciudad</th>";
+            dinamicTable += "<th>Accion</th>";
     dinamicTable += "</tr>";
     //filas con informacion de la tabla
     let personasGuardadas = [];

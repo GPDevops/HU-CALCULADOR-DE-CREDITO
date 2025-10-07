@@ -5,16 +5,16 @@ if ($resultado = $pdo -> query($sql)) {
     if ($resultado -> rowCount()) {
         //cabecera de la tabla
         echo "<table>";
-        echo "<tr>";
-            echo "<th>Id</th>";
-            echo "<th>Nombres</th>";
-            echo "<th>Apellidos</th>";
-            echo "<th>Numero Telefonico</th>";
-            echo "<th>Correo</th>";
-            echo "<th>Pais</th>";
-            echo "<th>Ciudad</th>";
-            echo "<th>Accion</th>";
-        echo "</tr>";
+            echo "<tr>";
+                echo "<th>Id</th>";
+                echo "<th>Nombres</th>";
+                echo "<th>Apellidos</th>";
+                echo "<th>Numero Telefonico</th>";
+                echo "<th>Correo</th>";
+                echo "<th>Pais</th>";
+                echo "<th>Ciudad</th>";
+                echo "<th>Accion</th>";
+            echo "</tr>";
         //Por cada contacto se pinta un renglon o fila de la tabla
         while ($row = $resultado -> fetch()) {
             echo "<tr>";
@@ -26,7 +26,9 @@ if ($resultado = $pdo -> query($sql)) {
                 echo "<td>" .$row["pais"]."</td>";
                 echo "<td>" .$row["ciudad"]."</td>";
                 //la etiqueta "a" permite poner un enlace interno, en este caso se envia el "id"
-                echo '<a href="./detalles.php?id='.$row["id"].'">Ver</a>';
+                echo '<a href="./detalles.php?id='.$row["id"].'" class="p-2">Ver</a>';
+                echo '<a href="./create.php?id='.$row["id"].'" class="p-2">Editar</a>';
+                echo '<a href="./delete.php?id='.$row["id"].'" class="p-2">Eliminar</a>';
             echo "</td>";
             echo "</tr>";
             echo "<tr>";
